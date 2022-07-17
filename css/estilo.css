@@ -1,0 +1,584 @@
+/**
+ *	Versión 1.0.0
+ */
+@charset "utf-8";
+
+/**
+ *	Fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+/**
+ *	Mobile
+ */
+
+/**	General */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	line-height: 1;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+/**	Body */
+body {
+	background-color: #134F5C;
+	color: #D0E0E3;
+}
+
+/**	Header */
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+}
+
+/**	Encabezados */
+h1,
+h2,
+h3 {
+	font-family: 'Montserrat';
+	font-size: 3.6em;
+	line-height: 1.5;
+	font-weight: 700;
+	text-align: center;
+}
+
+h2,
+h3 {
+	margin: 1em 0;
+	font-size: 3em;
+	color: #134F5C;
+}
+
+/**	Main */
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 4em 2em;
+	background-color: #FFF;
+}
+
+ul, ol {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-items: flex-start;
+	width: 100%;
+}
+
+p,
+ul li,
+ol li {
+	font-size: 2.4em;
+	line-height: 1.5;
+	text-align: left;
+	color: #134F5C;
+}
+
+ul li,
+ol li {
+	margin-left: 2em;
+}
+
+p strong,
+p em,
+p span,
+p a,
+ul li strong,
+ul li em,
+ul li a,
+ol li strong,
+ol li em,
+ol li a {
+	font-size: 1em;
+}
+
+p a,
+ul li a,
+ol li a {
+	color: #134F5C;
+}
+
+p strong,
+ul li strong,
+ol li strong {
+	font-weight: 700;
+}
+
+p em,
+ul li em,
+ol li em {
+	font-style: italic;
+}
+
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+label {
+	font-size: 2.8rem;
+	line-height: 1.5;
+	text-align: left;
+	color: #ffffff;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin: .5em 0;
+	padding: 1em 2em;
+}
+
+legend {
+	padding: 0 .5em;
+	font-size: 1.6em;
+	line-height: 1.5;
+	font-weight: 400;
+	text-align: left;
+	color: #134F5C;	
+}
+
+input {
+	margin: .5em 0;
+	border: 1px solid #134F5C;
+	border-radius: .5em;
+	padding: 0 1em;
+	font-size: 2.4em;
+	line-height: 1.5;
+	text-align: left;
+	color: #050505;
+}
+
+button,
+input[type=button],
+input[type=submit] {
+	margin: .5em 0;
+	border: none;
+	border-radius: .5em;
+	padding: .25em .5em;
+	background: #134F5C;
+	cursor: pointer;
+	font-size: 2.4em;
+	line-height: 1.5;
+	text-align: center;
+	color: #D0E0E3;
+	max-width: 200px;
+}
+
+input[type=button]:disabled,
+input[type=submit]:disabled {
+	opacity: .8;
+	cursor: not-allowed;
+}
+
+form textarea {
+	margin: .5em 0;
+	border-radius: .5em;
+	border: 1px solid #134F5C;
+	padding: 0 .5em;
+	background: #D0E0E3;
+	font-size: 1.6em;
+	line-height: 1.5;
+	font-weight: 400;
+	text-align: left;
+	color: #134F5C;
+}
+
+form select {
+	margin: .5em 0;
+	border-radius: .5em;
+	border: 1px solid #134F5C;
+	padding: 0 .5em;
+	background: #D0E0E3;
+	font-size: 1.6em;
+	line-height: 1.5;
+	font-weight: 400;
+	text-align: left;
+	color: #134F5C;	
+}
+
+hr {
+	margin: 1em 0%;
+	width: 100%;
+	height: .1em;
+}
+
+/**	Footer */
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 2em;
+	
+}
+
+footer ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	list-style: none;
+}
+
+footer ul li {
+	font-family: 'Montserrat';
+	font-size: 1.4em;
+	line-height: 1.5;
+	text-align: center;
+	color: #D0E0E3;
+}
+
+footer ul li a {
+	font-family: 'Montserrat';
+	font-size: 1em;
+	text-decoration: none;
+	color: #D0E0E3;
+}
+
+/**	Overs */
+p a:hover,
+li a:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+	opacity: .8;
+}
+
+#finalizarComprar p:first-of-type {
+	padding-top: 45vh;
+	font-size: 3rem;
+}
+
+#modalCarrito #comprar {
+	background-color: antiquewhite;
+	color: black;
+	border-radius: 5%;
+	margin: 15px;
+	font-size: 2.5rem;
+}
+
+#checkout form div,  #checkout2 form div, #checkout3 form div {
+	font-size: 2.5rem;
+	margin: 10px;
+	color: white;
+}
+
+#checkout  input, #checkout2 input, #checkout3 input {
+	margin: 10px;
+	font-size: 1.8rem;
+	color: black;
+}
+
+.cancelar {
+	background-color: rgb(252, 48, 48);
+	color: white;
+}
+
+img {
+	cursor: pointer;
+}
+
+#finalizar {
+	background-color: rgb(51, 172, 51);
+	color: black;
+	max-width: 400px;
+}
+
+#error {
+	background-color: rgb(44, 43, 43);
+	border-radius: 10px;
+	padding: 15px;
+	border: 2px solid red;
+}
+
+.pasoUno, .pasoDos, .pasoTres {
+	background-color: rgb(51, 51, 51);
+}
+
+#checkout, #checkout2, #checkout3, #finalizarComprar {
+	background-color: black;
+	color: white;
+}
+
+input:invalid {
+	border: 2px solid red;
+}
+
+input {
+	border: 2px solid green;
+}
+
+/**	Carrito */
+#minicarrito {
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5em 1em;
+	width: 100%;
+	background: rgba(19,79,92,.25);
+	position: sticky;
+}
+
+#productos, #filtrados {
+	background: rgba(19,79,92,.25);
+	width: 100%;
+}
+
+#adidas, #jordan, #vans, #urbano, #deportivo {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1em 0;
+	padding: 1em;
+}
+
+#adidas div, #jordan div, #vans div {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	width: 90%;
+	padding: 1em;
+}
+
+#productos img {
+	width: 90%;
+	margin: 1em 5%;
+	transition: .5s ease;
+}
+
+
+#productos div div {
+	padding: 0;
+}
+
+#productos h3,
+#productos p {
+	margin: 0;
+	text-align: center;
+}
+
+.modal {
+	position: fixed;
+	z-index: 999999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.9);
+}
+
+.modal {
+	display: none;
+}
+
+.modal a {
+	position: fixed;
+	z-index: 999999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 1em;
+	right: 1em;
+	border-radius: 2.5em;
+	width: 5em;
+	height: 5em;
+	background-color: rgba(255,255,255,.9);
+	font-size: 1em;
+	font-weight: 400;
+	text-align: center;
+	color: #1A4A5E;
+	text-decoration: none;
+}
+
+.modal a:hover {
+	background-color: #1A4A5E;
+	color: rgba(255,255,255,.9);
+}
+
+.modal img {
+	height: 50%;
+}
+
+.modal h3, .modal p, .modal li {
+	margin: 0;
+	text-align: center;
+	color: #D0E0E3;
+}
+
+.modal li {
+	display: flex;
+	justify-content: center;
+	margin: .25em 0;
+	width: 100%;
+}
+
+.modal li span {
+	font-size: 1em;
+}
+
+/**
+ *	Web
+ */
+@media screen and (min-width: 960px) {
+
+	#productos {
+		flex-direction: row;
+	}
+
+	#productos div {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	/**	Footer */
+	footer ul {
+		flex-direction: row;
+	}
+
+}
+
+div.info {
+	width: 70%!important;
+}
+
+#productos img:hover {
+  opacity: 0.3;
+}
+
+#productos button {
+	margin: 0.5rem auto;
+}
+
+#modalCarrito button {
+	font-size: 2.4rem;
+	margin: 0 15px;
+	background-color: #dc3545;
+	line-height: 1;
+	border-radius: 50%;
+}
+
+#modalCarrito span {
+	margin-left: 20px;
+}
+
+.descripcion {
+	width: 50%;
+	max-width: 750px;
+}
+
+#boton-vaciar {
+	border-radius: 5%!important;
+}
+
+#adidas, #jordan, #vans {
+	width: 95%;
+}
+
+#productos .detalles {
+	width: 30%;
+}
+
+#adidas, #jordan, #vans {
+	flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+a {
+	margin: 5px 10px;
+	background-color: #134F5C;
+	padding: 10px;
+	color: white;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+#navegacion, #filtrar {
+	margin: 20px;
+}
+
+#top {
+	background-color: transparent;
+	position: fixed;
+	right: 5px;
+	bottom: 40px;
+}
+
+.abrir, .cerrar{
+	background-color: transparent;
+}
+
+.busquedas{
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}  
+.busquedas h3 {
+	display: inline;
+}
+
+#filtrar a {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	color: #1A4A5E;
+	font-weight: bold;
+}
+
+#opciones-filtrado a {
+	display: block;
+	margin: 5px auto;
+	padding: 3px;
+}
+
+#opciones-filtrado {
+	position: absolute;
+	z-index: 999;
+	background-color: #134f5c46;
+	width: 150px;
+	margin-top: 5px;
+	margin-left: -45px;
+	display: none;
+}
+
+#cerrar {
+	display: none;
+}
+
+#minicarrito {
+	z-index: 9999;
+}

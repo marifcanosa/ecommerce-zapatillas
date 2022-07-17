@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Programación I | Final | Fernandes Canosa, Méndez Estrada </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+		<link rel="shortcut icon" href="imgs/favicon.ico" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/estilo.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Programación I | Final | Fernandes Canosa, Méndez Estrada | Mi carrito</h1>
+		</header>
+		<main>
+			<div id="minicarrito">
+				<div>
+					<input type="text" id="formulario">
+					<button id="boton">Buscar</button>
+				</div>
+				<p><span id="cantidad">0</span> ítems agregados</p>
+				<p>$<span id="total">0</span> es el total</p>
+				<button id="verCart">Ver carrito</button>
+			</div>
+			<div>
+				<ul id="resultado"></ul>
+			</div>
+			<div>
+				<a href="#" id="top"><img src="imgs/up-arrow.png" alt="flecha subir"></a>
+			</div>
+			<h2>Productos</h2>
+		<div class="busquedas">
+			<div id="navegacion">
+				<h3>Categorias</h3>
+				<a href="#adidas">Adidas</a>
+				<a href="#jordan">Jordan</a>
+				<a href="#vans">Vans</a>
+			</div>
+			<div id="filtrar">
+				<a id="abrir" href="#"><img src="imgs/filter.png" alt="filtrar"></a>
+				<a id="cerrar" href="#"><img src="imgs/filter.png" alt="cerrar"></a>
+				<div id="opciones-filtrado">
+					<a id="al" href="#">Todo</a>
+					<a id="ad" href="#">Adidas</a>
+					<a id="jo" href="#">Jordan</a>
+					<a id="va" href="#">Vans</a>
+				</div>
+			</div>
+		</div>
+			<!-- Generar el contenido del div#productos dinámicamente -->
+			<div id="productos">
+				<div id="adidas"> </div>
+				<div id="jordan"> </div>
+				<div id="vans"> </div>
+			</div>
+				
+			
+		</main>
+		<footer>
+			<ul>
+				<li>Profesor Alejandro Potente</li>
+				<li>
+					<a href="mailto:alejandro.potente@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DW2[M|T|N][A|B]%20-%20Apellido,%20Nombre" target="_blank">alejandro.potente@davinci.edu.ar</a>
+				</li>
+				<li>Programación 1</li>
+			</ul>
+		</footer>
+
+		<!-- Generar el div#modalProducto y su contenido dinámicamente-->
+		<div class="modal" id="modalProducto">
+			<a href="javascript:void(0)">X</a>
+			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img id="img-1" src="#" class="d-block" alt="Imagen1">
+				  </div>
+				  <div class="carousel-item">
+					<img id="img-2" src="#" class="d-block" alt="Imagen2">
+				  </div>
+				  <div class="carousel-item">
+					<img id="img-3" src="#" class="d-block" alt="Imagen3">
+				  </div>
+				  <div class="carousel-item">
+					<img id="img-4" src="#" class="d-block" alt="Imagen4">
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span id="prev" class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span id="next" class="visually-hidden">Next</span>
+				</button>
+			  </div>
+			<h3>Producto</h3>
+			<p>Precio: $<span>0</span></p>
+			<p class="descripcion">Descripción</p>
+		</div>
+
+		<div class="modal" id="modalOferta">
+			<img src="#" alt="Oferta" />
+			<a href="javascript:void(0)">X</a>
+			<p class="descripcion">Este anuncio desaparecerá en <span>10</span> segundos </p>
+		</div>
+
+		<!-- Generar el div#modalCarrito y su contenido dinámicamente -->
+		<div class="modal" id="modalCarrito">
+			<a href="javascript:void(0)">X</a>
+			<p>Items: <span id="amCart">0</span> - Total: $<span id="tlCart">0</span></p>
+			<hr />
+			<ul id="carrito">
+			</ul>
+			<button id="boton-vaciar">Vaciar</button>
+			<button id="comprar">CHECKOUT</button>
+		</div>
+
+		<div id="check">
+		<div class="modal" id="checkout">
+			<div>
+				<button class="pasoUno bg-secondary">1</button>
+				<button class="pasoDos">2</button>
+				<button class="pasoTres">3</button>
+			</div>
+			<div class="copiaTotal">
+				<p>Total de productos:<span></span></p>
+				<p>Total: $ <span></span></p>
+			</div>
+			<aside>
+				<form action="enviar_formulario.php" method="post" enctype="multipart/form-data">
+					<h3>Datos personales:</h3>
+					<div><label>Nombre:<input type="text" required></label></div>
+					<div><label>Apellido:<input type="text" required></label></div>
+					<div><label>Telefono:<input type="number" required></label></div>
+					<div><label>Email:<input type="email" required></label></div>
+				</form>
+				</aside>
+			<button class="cancelar">Cancelar</button>
+		</div>
+		<div class="modal" id="checkout2">
+			<div>
+				<button class="pasoUno">1</button>
+				<button class="pasoDos bg-secondary">2</button>
+				<button class="pasoTres">3</button>
+			</div>
+			<div class="copiaTotal">
+				<p>Total de productos:<span></span></p>
+				<p>Total: $ <span></span></p>
+			</div>
+			<aside>
+				<form action="enviar_formulario.php" method="post" enctype="multipart/form-data">
+					<h3>Datos de envío:</h3>
+					<div><label>Dirección:<input type="text" required></label></div>
+					<div><label>Localidad:<input type="text" required></label></div>
+					<div><label>Provincia:<input type="text" required></label></div>
+					<div><label>País:<input type="text" required></label></div>
+				</form>
+			</aside>
+			<button class="cancelar">Cancelar</button>
+		</div>
+		<div class="modal" id="checkout3">
+			<div>
+				<button class="pasoUno">1</button>
+				<button class="pasoDos">2</button>
+				<button class="pasoTres bg-secondary">3</button>
+			</div>
+			<div class="copiaTotal">
+				<p>Total de productos:<span></span></p>
+				<p>Total: $ <span></span></p>
+			</div>
+			<aside>
+				<form action="enviar_formulario.php" method="post" enctype="multipart/form-data">
+					<h3>Datos de pago:</h3>
+					<div><label>Número de tarjeta:<input type="number" required></label></div>
+					<div><label>Fecha de vencimiento:<input type="date" required></label></div>
+					<div><label>CVV:<input type="number" required></label></div>
+				</form>
+			</aside>
+			<div id="error">
+				<p>Chequea que todos los campos del formulario esten completos antes de enviarlo.</p>
+			</div>
+			<button id="finalizar">Finalizar Compra</button>
+			<button class="cancelar">Cancelar</button>
+		</div>
+		<div class="modal" id="finalizarComprar">
+			<p>¡Gracias por tu compra en breve te enviaremos la factura!</p>
+			<p>En <span>5</span> segundos te redireccionaremos al home</p>
+		</div>
+	    </div>
+		<script src="js/final.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
